@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import {v4 as uuid } from 'uuid';
 
 // Implement useEffect to watch for changes in param
 // each time when param changes increment counter
@@ -26,7 +27,7 @@ export function Task1() {
 
       <button
         onClick={() => {
-          setParam(faker.string.uuid());
+          setParam(uuid());
         }}
       >
         Update url param

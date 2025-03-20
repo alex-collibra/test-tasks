@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import {v4 as uuid } from 'uuid';
 
 function createInitialTodos() {
   console.log('Expensive function');
@@ -13,7 +14,7 @@ function createInitialTodos() {
   return initialTodos;
 }
 
-const randomId = Math.random();
+const randomId =uuid();
 
 // Currently createInitialTodos function is called on every rerender
 // Press Unrelated state update to see it
@@ -37,7 +38,7 @@ export function Task2() {
 
       <button
         onClick={() => {
-          setRerender(Math.random());
+          setRerender(uuid());
         }}
       >
         Unrelated state update
